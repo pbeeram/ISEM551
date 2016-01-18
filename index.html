@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html ng-app>
-<head>
-    <title>AngularJS Assignment2</title>
-    <script type="text/javascript"
-        src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<html lang="en">
+  <head>
+    <title>AngularJS Routing Project</title>
+  </head>
  
-</head>
-<body>
-     
-    Write some text in textbox:
-    <input type="text" ng-model="InputText" />
+  <body ng-app="sampleApp">
  
-    <h1>Hello {{ InputText }}</h1>
-     
-</body>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-3">
+            <ul class="nav">
+                <li><a href="#AddNewOrder"> Add New Order </a></li>
+                <li><a href="#ShowOrders"> Show Order </a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div ng-view></div>
+        </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
